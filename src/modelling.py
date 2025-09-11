@@ -25,11 +25,9 @@ from src.exception import CustomException
 
 ts_palette = ['#233D4D', '#F26419', '#8AA29E', '#61210F', '#E8E391', '#6A9D98', '#C54F33', '#3E5A4D', '#AA7F41', '#A24422']
 
-
+# 1.1. Splits the time series data into train and test sets on a chronological order based on the cutoff date
 def time_series_split(data, cutoff_date):
     '''
-    Splits the time series data into train and test sets on a chronological order based on the cutoff date.
-
     Args:
     data (pandas.DataFrame): The time series data to be split.
     cutoff_date (str or datetime): The date that separates the training and test sets.
