@@ -1,10 +1,23 @@
-'''
+"""
+==================================================================
+FORECAST ARTIFIACT MODULE
+------------------------------------------------------------------
 This script aims to provide util functions for obtaining machine learning model's artifacts.
-'''
+This module ingests raw data from the Facebook Marketing API into 
+Google BigQuery, forming the raw data layer of the Ads Data Pipeline.
 
-'''
-Importing the libraries.
-'''
+It orchestrates the full ingestion flow: from authenticating the SDK, 
+to fetching data, enriching it, validating schema, and loading into 
+BigQuery tables organized by campaign, ad, creative and metadata.
+
+✔️ Supports append or truncate via configurable `write_disposition`  
+✔️ Applies schema validation through centralized schema utilities  
+✔️ Includes logging and CSV-based error tracking for traceability
+
+⚠️ This module is strictly limited to *raw-layer ingestion*.  
+It does **not** handle data transformation, modeling, or aggregation.
+==================================================================
+"""
 
 # File handling.
 import os
@@ -19,10 +32,9 @@ import pandas as pd
 import numpy as np
 
 
+# 1.1. Save a Python object to a binary file using pickle serialization
 def save_object(file_path, object):
     '''
-    Save a Python object to a binary file using pickle serialization.
-
     This function takes an object and a file path as input and saves the object to the specified file using pickle
     serialization. If the directory of the file does not exist, it will be created.
 

@@ -48,9 +48,10 @@ def time_series_split(data, cutoff_date):
         raise CustomException(e, sys)
     
 
+# 1.2. Plots the time series data after splitting into train and test sets
 def plot_time_series_split(train, test, cutoff_date):
     '''
-    Plots the time series data after splitting into train and test sets.
+   
 
     Args:
     train (pandas.DataFrame): The training data to be plotted.
