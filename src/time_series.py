@@ -21,7 +21,7 @@ from lightgbm import LGBMRegressor
 import sys
 
 # Utils.
-from src.exception import CustomException
+from src.exception.exception import CustomException
 
 ts_palette = ['#233D4D', '#F26419', '#8AA29E', '#61210F', '#E8E391', '#6A9D98', '#C54F33', '#3E5A4D', '#AA7F41', '#A24422']
 
