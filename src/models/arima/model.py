@@ -76,7 +76,7 @@ class ARIMAModel(BaseForecastModel):
                 "yhat": y_pred.values
             }))
 
-        return pd.concat(results, ignore_index=True)
+        return pd.concat(results, ignore_index=True)    
 
 # 1.4. Update model with new data
     def update(self, df: pd.DataFrame, id_col="unique_id", y_col="y", ds_col="ds",
