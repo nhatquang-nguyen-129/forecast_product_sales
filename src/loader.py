@@ -36,8 +36,8 @@ class CSVLoader(BaseLoader):
 
 # 3. BigQuery Loader
 class BigQueryLoader(BaseLoader):
-    """Loader từ BigQuery."""
 
+# 3.1. Initialize Google BigQuery Sessions
     def __init__(self, project_id: str, dataset_id: str, table_id: Optional[str] = None):
         if bigquery is None:
             raise ImportError("[LOADER] Google BigQuey Client is not initialized.")
