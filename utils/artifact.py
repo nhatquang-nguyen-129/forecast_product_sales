@@ -25,7 +25,7 @@ import pickle
 
 # Debugging and verbose.
 import sys
-from src.exception.exception import CustomException
+from utils.exception import CustomException
 
 # Data manipulation.
 import pandas as pd
